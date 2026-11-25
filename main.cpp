@@ -30,7 +30,7 @@ DWORD GetPid(const wchar_t* ProcessName) {
 				pid = pe.th32ProcessID;
 				return pid;
 			}
-		} while (Process32FirstW(hSnapshot, &pe));
+		} while (Process32NextW(hSnapshot, &pe));
 	}
 }
 
